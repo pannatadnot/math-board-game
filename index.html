@@ -203,7 +203,7 @@ section h2 small{font-family:Sarabun,sans-serif;font-size:16px;color:#4A5578;fon
 <div class="stage"><button class="nb" id="pv" aria-label="ใบก่อนหน้า">&#8249;</button>
 <div class="flip" id="fl"><div class="inner"><div class="face" id="ff"></div><div class="face bk" id="fb"></div></div></div>
 <button class="nb" id="nx" aria-label="ใบถัดไป">&#8250;</button></div>
-<div id="tm"><span id="tt">2:00</span><button id="ts" class="tb">เริ่มจับเวลา</button><button id="tr" class="tb">รีเซ็ต</button></div>
+<div id="tm"><span id="tt">1:00</span><button id="ts" class="tb">เริ่มจับเวลา</button><button id="tr" class="tb">รีเซ็ต</button></div>
 <div class="hint">แตะที่การ์ดเพื่อพลิกดูเฉลย · ลูกศรซ้ายขวาเปลี่ยนใบ</div>
 </div>
 <script>
@@ -246,7 +246,7 @@ function back(c){
   return `<div class="card" style="background:${d.color}"><div class="pp"><div class="top"><div class="l"><div class="pill ink">เฉลย</div><div class="num" style="color:${d.color};font-weight:700">${d.short} ${c.no}/${c.total}</div></div></div><div class="art2" style="height:16cqw;border-color:${d.color}">${scenes[c.scene]}</div><div class="abox" style="background:${d.light};border-color:${d.color}"><div class="alabel" style="color:${d.color}">${E?'ผลที่ได้':'คำตอบ'}</div><div class="aval">${c.ans}</div></div><div><div class="sh">วิธีคิด</div>${steps}</div><div class="sp"></div>${foot}</div></div>`;
 }
 let cur=-1;
-const TM=120;let tleft=TM,tend=0,tiv=null,actx=null;
+const TM=60;let tleft=TM,tend=0,tiv=null,actx=null;
 function fmt(s){return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
 function tshow(){$('#tt').textContent=fmt(tleft);const m=$('#tm');m.classList.toggle('run',!!tiv&&tleft>10);m.classList.toggle('warn',!!tiv&&tleft<=10&&tleft>0);m.classList.toggle('end',tleft===0)}
 function beep(){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();[0,.35,.7].forEach(d=>{const o=actx.createOscillator(),g=actx.createGain();o.frequency.value=880;o.connect(g);g.connect(actx.destination);const s=actx.currentTime+d;g.gain.setValueAtTime(.25,s);g.gain.exponentialRampToValueAtTime(.001,s+.3);o.start(s);o.stop(s+.3)})}catch(e){}}
@@ -415,8 +415,8 @@ function render(){
   Object.keys(cnt).forEach(k2=>document.querySelector('#c'+k2+' .tk').classList.toggle('many',cnt[k2]>3));
 }
 
-const HOW=['ทุกกลุ่มเริ่มที่ช่อง 1 ด้วย 100 เหรียญ สับการ์ดแต่ละกองแล้ววางคว่ำที่กลางกระดาน','ตัวแทนกลุ่มออกมาทอยลูกเต๋าหน้ากระดานเกม เดินตัวละครนับจำนวนช่องตามแต้มบนหน้าลูกเต๋า','ดูสถานการณ์ในช่องที่ได้ ช่องที่มีป้ายดาวฟรีรับ 1 ดาว เท่ากับ 10 เหรียญ ช่องที่มีป้ายเสียดาวจ่ายคืน 1 ดาว = 10 เหรียญ แต่หากทีมมี 0 เหรียญไม่ต้องจ่ายคืน','ตัวแทนกลุ่มจั่วการ์ดจากกองที่ตรงกับสีของช่อง แล้วอ่านโจทย์ให้เพื่อนทั้งห้องฟัง จากนั้นกลับไปที่กลุ่มช่วยกันแสดงแนวคิด และบันทึกลงใบกิจกรรม ทุกกลุ่มต้องแสดงแนวคิดลงในใบกิจกรรมด้วย ให้เวลา 2 นาที','เมื่อหมดเวลา ให้ส่งตัวแทนกลุ่มมานำเสนอแนวคิดหน้าชั้นเรียน หากถูกต้องก็จะได้รับเหรียญตามที่การ์ดระบุไว้ แต่หากไม่ถูกต้องกลุ่มอื่น ๆ สามารถเสนอแนวคิดเพื่อชิงเหรียญได้ ซึ่งหากตอบถูกจะได้เหรียญครึ่งหนึ่งของเหรียญที่การ์ดระบุไว้','ในแต่ละหน้าที่ ไม่ว่าจะเป็น ตัวแทนทอยลูกเต๋า ตัวแทนนำเสนอ ผู้บันทึกใบกิจกรรม ในแต่ละตาให้สับเปลี่ยนหน้าที่กันไปเรื่อย ๆ','เล่นวนแบบนี้ไปเรื่อย ๆ จนหมดเวลา (แต่ให้ทุกกลุ่มได้เล่นจำนวนตาที่เท่ากัน) กลุ่มใดมีเหรียญมากที่สุดเป็นผู้ชนะ'];
-$('#how').innerHTML='<h2>วิธีเล่น</h2>'+HOW.map((h,i)=>`<div class="hs"><i>${i+1}</i><div>${h}</div></div>`).join('')+'<div class="hn">ก่อนเล่น: เปิดเมนู "กระดานเกม" เพื่อทอยลูกเต๋าและเดินตัวการ์ตูน แล้วกด "จั่วการ์ด" เพื่อขึ้นโจทย์บนจอ มีปุ่มจับเวลา 2 นาทีใต้การ์ด และกดที่การ์ดอีกครั้งเพื่อดูเฉลย</div>';
+const HOW=['ทุกกลุ่มเริ่มที่ช่อง 1 ด้วย 100 เหรียญ สับการ์ดแต่ละกองแล้ววางคว่ำที่กลางกระดาน','ตัวแทนกลุ่มออกมาทอยลูกเต๋าหน้ากระดานเกม เดินตัวละครนับจำนวนช่องตามแต้มบนหน้าลูกเต๋า','ดูสถานการณ์ในช่องที่ได้ ช่องที่มีป้ายดาวฟรีรับ 1 ดาว เท่ากับ 10 เหรียญ ช่องที่มีป้ายเสียดาวจ่ายคืน 1 ดาว = 10 เหรียญ แต่หากทีมมี 0 เหรียญไม่ต้องจ่ายคืน','ตัวแทนกลุ่มจั่วการ์ดจากกองที่ตรงกับสีของช่อง แล้วอ่านโจทย์ให้เพื่อนทั้งห้องฟัง จากนั้นกลับไปที่กลุ่มช่วยกันแสดงแนวคิด และบันทึกลงใบกิจกรรม ทุกกลุ่มต้องแสดงแนวคิดลงในใบกิจกรรมด้วย ให้เวลา 1 นาที','เมื่อหมดเวลา ให้ส่งตัวแทนกลุ่มมานำเสนอแนวคิดหน้าชั้นเรียน หากถูกต้องก็จะได้รับเหรียญตามที่การ์ดระบุไว้ แต่หากไม่ถูกต้องกลุ่มอื่น ๆ สามารถเสนอแนวคิดเพื่อชิงเหรียญได้ ซึ่งหากตอบถูกจะได้เหรียญครึ่งหนึ่งของเหรียญที่การ์ดระบุไว้','ในแต่ละหน้าที่ ไม่ว่าจะเป็น ตัวแทนทอยลูกเต๋า ตัวแทนนำเสนอ ผู้บันทึกใบกิจกรรม ในแต่ละตาให้สับเปลี่ยนหน้าที่กันไปเรื่อย ๆ','เล่นวนแบบนี้ไปเรื่อย ๆ จนหมดเวลา (แต่ให้ทุกกลุ่มได้เล่นจำนวนตาที่เท่ากัน) กลุ่มใดมีเหรียญมากที่สุดเป็นผู้ชนะ'];
+$('#how').innerHTML='<h2>วิธีเล่น</h2>'+HOW.map((h,i)=>`<div class="hs"><i>${i+1}</i><div>${h}</div></div>`).join('')+'<div class="hn">ก่อนเล่น: เปิดเมนู "กระดานเกม" เพื่อทอยลูกเต๋าและเดินตัวการ์ตูน แล้วกด "จั่วการ์ด" เพื่อขึ้นโจทย์บนจอ มีปุ่มจับเวลา 1 นาทีใต้การ์ด และกดที่การ์ดอีกครั้งเพื่อดูเฉลย</div>';
 $('#kn').innerHTML=TK[7];
 [['cards','คลังการ์ด','การ์ด 64 ใบ แยกตามหมวด กดดูโจทย์และเฉลย','#2F6FDE','orchard'],['board','กระดานเกม','ทอยลูกเต๋า เดินตัวการ์ตูน จั่วการ์ด นับเหรียญ','#1F9D68','gate'],['howto','วิธีเล่น','กติกา 7 ขั้นตอนสำหรับเล่นทั้งห้อง','#F28C1B','books']].forEach(([v,h,d,c,sc])=>{
   const b=document.createElement('button');b.className='mt';b.style.background=c;b.dataset.v=v;
