@@ -3,10 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#FFF6E5">
-<link rel="icon" href="icon-192.png">
-<link rel="apple-touch-icon" href="icon-192.png">
 <title>คลังการ์ด · ตลาดนัดอัตราส่วน</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -152,6 +148,42 @@ section h2 small{font-family:Sarabun,sans-serif;font-size:16px;color:#4A5578;fon
 .hs{display:flex;gap:16px;align-items:flex-start;background:#FFFCF5;border:3px solid #E8D9B8;border-radius:18px;padding:14px 18px;margin-bottom:12px;font-size:20px;line-height:1.55}
 .hs i{flex:none;width:44px;height:44px;border-radius:50%;background:#2F6FDE;color:#fff;font:700 22px/44px Prompt,sans-serif;text-align:center;font-style:normal}
 .hn{background:#FFF1BF;border:3px solid #E0B02F;border-radius:18px;padding:14px 18px;font-size:19px;line-height:1.6}
+
+.ct{position:relative;display:block;border:.35cqw solid var(--tc,#E8D9B8);border-radius:1.4cqw;overflow:hidden;background:#FFF6E5}
+.cbg{position:absolute;inset:0}.cbg .lay{position:absolute;inset:0;animation:fin .9s ease-out}.cbg svg{width:100%;height:100%;display:block}
+@keyframes fin{from{opacity:0;transform:scale(1.06)}}
+#cp{position:relative;display:grid;grid-template-columns:1fr 1.55fr 1.15fr;gap:.8cqw;padding:.8cqw;height:100%}
+.pn{background:rgba(255,252,245,.94)}
+.pn.lf{background:none;border:0;padding:0;overflow:visible;gap:.6cqw}
+.pn.lf .who{justify-content:space-between;text-align:left;padding:.5cqw .9cqw;box-shadow:0 .2cqw .5cqw rgba(0,0,0,.25)}
+.pn.lf .who>span:first-child{display:flex;flex-direction:column;line-height:1.2}
+.cbd{display:flex;align-items:center;gap:.4cqw;background:#fff;color:#1F2A44;border-radius:1cqw;padding:.2cqw .8cqw;font:700 1.6cqw Prompt,sans-serif}
+.cbd .coin{width:2cqw;height:2cqw}
+.dr{display:flex;align-items:center;gap:.8cqw;background:rgba(255,252,245,.94);border-radius:1.2cqw;padding:.6cqw .9cqw;box-shadow:0 .2cqw .5cqw rgba(0,0,0,.2)}
+.dr .die{width:5.4cqw;height:5.4cqw;padding:.7cqw;border-radius:1.1cqw;flex:none}
+.dc{display:flex;flex-direction:column;gap:.3cqw;flex:1;min-width:0}.dc .bt{font-size:1.4cqw;padding:.5cqw .6cqw}
+.stg{flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+.bub{position:relative;background:#fff;border:.25cqw solid;border-radius:1.2cqw;padding:.5cqw 1cqw;font:600 1.4cqw/1.35 Sarabun,sans-serif;text-align:center;margin-bottom:1cqw;box-shadow:0 .2cqw .4cqw rgba(0,0,0,.2)}
+.bub::after{content:'';position:absolute;left:50%;bottom:-.9cqw;width:1.2cqw;height:1.2cqw;background:#fff;border-right:.25cqw solid;border-bottom:.25cqw solid;border-color:inherit;transform:translateX(-50%) rotate(45deg)}
+.chw{position:relative;flex:1;min-height:0;width:100%;display:flex;justify-content:center;align-items:flex-end;padding-bottom:1cqw}
+.chr{position:relative;z-index:2;height:100%;max-height:25cqw;aspect-ratio:170/245;filter:drop-shadow(0 .3cqw .3cqw rgba(0,0,0,.3))}
+.chr svg{width:100%;height:100%;display:block}
+.gnd{position:absolute;bottom:.3cqw;width:70%;height:2.2cqw;border-radius:50%;background:var(--tc);opacity:.55;z-index:1}
+.chr.idle{animation:bobi 2.4s ease-in-out infinite}.chr.hop{animation:hop .3s ease-in-out infinite}.chr.shake{animation:shk .25s linear infinite}
+@keyframes bobi{50%{transform:translateY(-.6cqw)}}@keyframes hop{50%{transform:translateY(-2.2cqw) rotate(-3deg)}}@keyframes shk{25%{transform:rotate(-5deg)}75%{transform:rotate(5deg)}}
+@media (prefers-reduced-motion:reduce){.chr.idle,.chr.hop,.chr.shake,.cbg .lay,.c2.land{animation:none}}
+.pn.mid{background:none;border:0;padding:0;overflow:visible;justify-content:space-between}
+.loc{align-self:flex-start;display:flex;align-items:center;gap:.7cqw;color:#fff;border-radius:2cqw;padding:.4cqw 1.2cqw .4cqw .5cqw;font:700 1.8cqw Prompt,sans-serif;box-shadow:0 .2cqw .5cqw rgba(0,0,0,.3)}
+.loc b{width:2.6cqw;height:2.6cqw;border-radius:50%;background:#fff;color:#1F2A44;display:flex;align-items:center;justify-content:center;font-size:1.5cqw}
+.loc small{font:500 1.2cqw Sarabun,sans-serif;opacity:.95}
+.c2{background:rgba(255,252,245,.95);border:.3cqw solid;border-radius:1.3cqw;padding:1cqw 1.1cqw;display:flex;flex-direction:column;gap:.7cqw;box-shadow:0 .3cqw .8cqw rgba(0,0,0,.25)}
+.c2.land{animation:pop .45s ease-out}@keyframes pop{from{transform:translateY(2cqw) scale(.94);opacity:.2}}
+.c2 .sit{font-size:1.8cqw;line-height:1.45;font-weight:500}
+.gb{border-radius:1cqw;padding:.3cqw 1cqw;font:700 1.4cqw Prompt,sans-serif;align-self:flex-start}
+.gb.p{background:#E1F5E9;color:#1F7A4D;border:.15cqw solid #1F9D68}.gb.m{background:#FDE6E6;color:#C23B3B;border:.15cqw solid #C23B3B}.gb.c{background:#FFF1BF;color:#7A5A00;border:.15cqw solid #E0B02F}
+.bign{font:700 5cqw/1.2 Prompt,sans-serif;text-align:center;color:#1F2A44}
+.bt.big{font-size:1.9cqw;padding:.8cqw 1.8cqw}
+.pn.rt{display:flex;flex-direction:column}
 </style>
 </head>
 <body>
@@ -271,7 +303,8 @@ BD.forEach(c=>{
   cl.innerHTML=`<div class="bn" style="background:${DC[k]}"><b style="color:${DC[k]}">${n}</b><span>${DN[k]}</span></div><div class="ar">${c.scene?scenes[c.scene]:''}${gm}<div class="tk"></div></div>`;
   bd.appendChild(cl);
 });
-const ct=document.createElement('div');ct.className='ct';ct.id='ct';bd.appendChild(ct);
+const ct=document.createElement('div');ct.className='ct';ct.id='ct';ct.innerHTML='<div class="cbg" id="cbg"></div><div id="cp"></div>';bd.appendChild(ct);
+let bgKey='';
 const PIPS={1:[5],2:[1,9],3:[1,5,9],4:[1,3,7,9],5:[1,3,5,7,9],6:[1,3,4,6,7,9]};
 const pips=n=>Array.from({length:9},(_,i)=>`<i class="${PIPS[n].includes(i+1)?'':'o'}"></i>`).join('');
 function newGame(n){
@@ -306,7 +339,7 @@ function land(){
   const t=G.teams[G.cur],c=BD[t.pos-1];
   if(c.gim==='+'){addC(t,10);G.msgs.push('ดาวฟรี! รับ +10 เหรียญ')}
   else if(c.gim==='-'){const d=addC(t,-10);G.msgs.push(d?'เสียดาว −10 เหรียญ':'เสียดาว แต่ไม่มีเหรียญให้จ่าย')}
-  G.phase='cell';saveG();render();
+  G.phase='cell';G.pop=true;saveG();render();
 }
 function openCard(idx){$('#ov').classList.add('solo');open(idx)}
 function act(a,el){
@@ -330,17 +363,32 @@ document.addEventListener('keydown',e=>{
 function render(){
   if(!G){$('#bd').hidden=true;$('#setup').hidden=false;setup();return}
   $('#setup').hidden=true;$('#bd').hidden=false;
-  const t=G.teams[G.cur],col=TC[G.cur],cell=BD[t.pos-1],n=G.teams.length;
+  const t=G.teams[G.cur],col=TC[G.cur],cell=BD[t.pos-1],n=G.teams.length,k=cell.deck;
   const round=Math.min(...G.teams.map(x=>x.turns))+1;
   const nextT=G.teams[(G.cur+1)%n];
-  const left=`<div class="pn"><div class="who" style="background:${col}"><span class="av">${head(G.cur)}</span>ตาของ ${t.name}<small>${CN[G.cur]}</small></div><div class="die" id="die">${pips(G.die||1)}</div><button class="bt g" data-act="roll" ${G.phase==='roll'?'':'disabled'}>ทอยลูกเต๋า</button><div class="sm">${G.phase==='roll'?'กดปุ่มหรือกด Space':G.phase==='cell'?'เดินถึงช่อง '+t.pos+' แล้ว':'กำลังเดิน…'}<br>รอบที่ ${round} · อยู่ช่อง ${t.pos}</div></div>`;
-  let mid;
+  const card=G.last?list[G.last.idx]:null;
+  const pop=G.pop;G.pop=false;
+  ct.style.setProperty('--tc',col);
+  if(G.phase==='cell'||G.phase==='roll'){
+    const key=t.pos+':'+G.cur;
+    if(key!==bgKey){bgKey=key;$('#cbg').innerHTML=`<div class="lay">${cell.scene?scenes[cell.scene]:''}</div>`}
+  }
+  let say,anim='idle';
+  if(G.phase==='roll')say='ถึงตาเราแล้ว! ทอยลูกเต๋าเลย';
+  else if(G.phase==='rolling'){say='ลุ้นนนน…';anim='shake'}
+  else if(G.phase==='moving'){say='ไปกันเลย!';anim='hop'}
+  else if(!card)say=cell.gim==='+'?'เย้! ได้ดาวฟรี':cell.gim==='-'?'โอ๊ะ เสียดาวซะแล้ว':k==='S'?'ผ่านจุดเริ่มต้น รับเหรียญ!':'ช่องนี้ต้องจั่วการ์ด';
+  else say=G.last.done?'เก็บคะแนนแล้ว จบตาได้':'ช่วยกันคิดนะ';
+  const hint=G.phase==='roll'?'กดปุ่มหรือกด Space':G.phase==='cell'?'ถึงช่อง '+t.pos+' แล้ว':G.phase==='moving'?'กำลังเดิน…':'กำลังทอย…';
+  const left=`<div class="pn lf"><div class="who" style="background:${col}"><span>ตาของ ${t.name}<small>${CN[G.cur]} · รอบที่ ${round}</small></span><span class="cbd">${coin}${t.coins}</span></div><div class="dr"><div class="die" id="die">${pips(G.die||1)}</div><div class="dc"><button class="bt g" data-act="roll" ${G.phase==='roll'?'':'disabled'}>ทอยลูกเต๋า</button><div class="sm">${hint}</div></div></div><div class="stg"><div class="bub" style="border-color:${col}">${say}</div><div class="chw"><div class="chr ${anim}">${TK[G.cur]}</div><div class="gnd"></div></div></div></div>`;
+  let loc=`<div class="loc" style="background:${DC[k]}"><b>${t.pos}</b>${G.phase==='moving'?'กำลังเดิน…':cell.title}<small>${DN[k]}</small></div>`;
+  let h='';
   if(G.phase==='cell'){
-    const k=cell.deck,card=G.last?list[G.last.idx]:null;
-    let h=`<h3 style="color:${DC[k]}">ช่อง ${cell.n} · ${k==='S'?'จุดเริ่มต้น':'จั่วการ์ด'+DN[k]}</h3><div class="sit">${cell.sit}</div>`;
+    const gb=cell.gim==='+'?'<div class="gb p">ดาวฟรี +1 ดาว (+10 เหรียญ)</div>':cell.gim==='-'?'<div class="gb m">เสียดาว −1 ดาว (−10 เหรียญ)</div>':cell.gim==='coin'?'<div class="gb c">ผ่านหรือหยุดช่องนี้ รับ +20 เหรียญ</div>':'';
+    h=`<div class="sit">${cell.sit}</div>${gb}`;
     if(G.msgs.length)h+=`<div class="ms">${G.msgs.join('<br>')}</div>`;
     h+='<div class="row">';
-    if(k!=='S'&&!card)h+=`<button class="bt" style="background:${DC[k]}" data-act="draw">จั่วการ์ด${DN[k]}</button>`;
+    if(k!=='S'&&!card)h+=`<button class="bt big" style="background:${DC[k]}" data-act="draw">จั่วการ์ด${DN[k]}</button>`;
     if(card){
       h+=`<button class="bt l" data-act="view">ดูการ์ด: ${card.title}</button>`;
       if(!G.last.done){
@@ -351,18 +399,20 @@ function render(){
         }
       }
     }
-    h+=`</div><div class="row" style="margin-top:auto"><button class="bt" data-act="end">จบตา → ${nextT.name}</button></div>`;
-    mid=`<div class="pn">${h}</div>`;
+    h+=`</div><div class="row"><button class="bt" data-act="end">จบตา → ${nextT.name}</button></div>`;
+  }else if(G.phase==='roll'){
+    h=`<div class="sit">ตัวแทน${t.name}ออกมาทอยลูกเต๋า แล้วเดินตามแต้ม</div>${G.msgs.length?`<div class="ms">${G.msgs.join('<br>')}</div>`:''}`;
   }else{
-    mid=`<div class="pn"><h3>${G.phase==='roll'?'พร้อมทอยแล้ว':'กำลังเดิน…'}</h3><div class="sit">${G.phase==='roll'?'ตัวแทน'+t.name+'ออกมาทอยลูกเต๋า แล้วเดินตามแต้ม':'ผลลูกเต๋า '+G.die+' แต้ม'}</div>${G.msgs.length?`<div class="ms">${G.msgs.join('<br>')}</div>`:''}</div>`;
+    h=`<div class="bign">เดิน ${G.die||''} ช่อง</div>${G.msgs.length?`<div class="ms">${G.msgs.join('<br>')}</div>`:''}`;
   }
+  const mid=`<div class="pn mid">${loc}<div class="c2 ${pop?'land':''}" style="border-color:${DC[k]}">${h}</div></div>`;
   const mx=Math.max(...G.teams.map(x=>x.coins));
-  const right=`<div class="pn"><h3>คะแนนเหรียญ</h3>${G.teams.map((x,i)=>`<div class="sc ${i===G.cur?'cur':''}"><span class="dt" style="background:${TC[i]}">${head(i)}</span><span class="nm">${x.name}${x.coins===mx&&mx>100?' ★':''}</span><button data-act="adj" data-i="${i}" data-d="-10">−</button><span class="cn2">${x.coins}</span><button data-act="adj" data-i="${i}" data-d="10">+</button></div>`).join('')}<div class="row" style="margin-top:auto"><button class="bt l" style="font-size:1.1cqw" data-act="reset">เริ่มเกมใหม่</button></div></div>`;
-  ct.innerHTML=left+mid+right;
+  const right=`<div class="pn rt"><h3>คะแนนเหรียญ</h3>${G.teams.map((x,i)=>`<div class="sc ${i===G.cur?'cur':''}"><span class="dt" style="background:${TC[i]}">${head(i)}</span><span class="nm">${x.name}${x.coins===mx&&mx>100?' ★':''}</span><button data-act="adj" data-i="${i}" data-d="-10">−</button><span class="cn2">${x.coins}</span><button data-act="adj" data-i="${i}" data-d="10">+</button></div>`).join('')}<div class="row" style="margin-top:auto"><button class="bt l" style="font-size:1.1cqw" data-act="reset">เริ่มเกมใหม่</button></div></div>`;
+  $('#cp').innerHTML=left+mid+right;
   document.querySelectorAll('.cl').forEach(c=>{c.classList.toggle('here',c.id==='c'+t.pos);c.querySelector('.tk').innerHTML=''});
   const cnt={};G.teams.forEach(x=>cnt[x.pos]=(cnt[x.pos]||0)+1);
   G.teams.forEach((x,i)=>{document.querySelector('#c'+x.pos+' .tk').insertAdjacentHTML('beforeend',`<span class="pw ${i===G.cur?'cur':''}" style="--c:${TC[i]}"><span class="cv">${TK[i]}</span><b>${i+1}</b></span>`)});
-  Object.keys(cnt).forEach(k=>document.querySelector('#c'+k+' .tk').classList.toggle('many',cnt[k]>3));
+  Object.keys(cnt).forEach(k2=>document.querySelector('#c'+k2+' .tk').classList.toggle('many',cnt[k2]>3));
 }
 
 const HOW=['ทุกกลุ่มเริ่มที่ช่อง 1 ด้วย 100 เหรียญ สับการ์ดแต่ละกองแล้ววางคว่ำที่กลางกระดาน','ตัวแทนกลุ่มออกมาทอยลูกเต๋าหน้ากระดานเกม เดินตัวละครนับจำนวนช่องตามแต้มบนหน้าลูกเต๋า','ดูสถานการณ์ในช่องที่ได้ ช่องที่มีป้ายดาวฟรีรับ 1 ดาว เท่ากับ 10 เหรียญ ช่องที่มีป้ายเสียดาวจ่ายคืน 1 ดาว = 10 เหรียญ แต่หากทีมมี 0 เหรียญไม่ต้องจ่ายคืน','ตัวแทนกลุ่มจั่วการ์ดจากกองที่ตรงกับสีของช่อง แล้วอ่านโจทย์ให้เพื่อนทั้งห้องฟัง จากนั้นกลับไปที่กลุ่มช่วยกันแสดงแนวคิด และบันทึกลงใบกิจกรรม ทุกกลุ่มต้องแสดงแนวคิดลงในใบกิจกรรมด้วย ให้เวลา 2 นาที','เมื่อหมดเวลา ให้ส่งตัวแทนกลุ่มมานำเสนอแนวคิดหน้าชั้นเรียน หากถูกต้องก็จะได้รับเหรียญตามที่การ์ดระบุไว้ แต่หากไม่ถูกต้องกลุ่มอื่น ๆ สามารถเสนอแนวคิดเพื่อชิงเหรียญได้ ซึ่งหากตอบถูกจะได้เหรียญครึ่งหนึ่งของเหรียญที่การ์ดระบุไว้','ในแต่ละหน้าที่ ไม่ว่าจะเป็น ตัวแทนทอยลูกเต๋า ตัวแทนนำเสนอ ผู้บันทึกใบกิจกรรม ในแต่ละตาให้สับเปลี่ยนหน้าที่กันไปเรื่อย ๆ','เล่นวนแบบนี้ไปเรื่อย ๆ จนหมดเวลา (แต่ให้ทุกกลุ่มได้เล่นจำนวนตาที่เท่ากัน) กลุ่มใดมีเหรียญมากที่สุดเป็นผู้ชนะ'];
@@ -381,7 +431,6 @@ function route(){
 }
 window.addEventListener('hashchange',route);
 route();
-if("serviceWorker" in navigator){try{navigator.serviceWorker.register("sw.js")}catch(e){}}
 </script>
 </body>
 </html>
